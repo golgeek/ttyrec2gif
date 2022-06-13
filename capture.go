@@ -1,15 +1,16 @@
-package main
+package ttyrec2gif
 
 import (
 	"fmt"
-	"github.com/errnoh/term.color"
-	"github.com/golang/freetype"
-	"github.com/golang/freetype/truetype"
-	"github.com/james4k/terminal"
 	"image"
 	"image/color/palette"
 	"image/draw"
 	"os"
+
+	color "github.com/errnoh/term.color"
+	"github.com/golang/freetype"
+	"github.com/golang/freetype/truetype"
+	"github.com/james4k/terminal"
 )
 
 var font *truetype.Font
@@ -31,6 +32,7 @@ func init() {
 
 // Capture draws virtual terminal and return paletted image
 func (g *GifGenerator) Capture(state *terminal.State) (paletted *image.Paletted, err error) {
+
 	fb := font.Bounds(fontSize)
 	cursorX, cursorY := state.Cursor()
 	left, top, right, bottom := g.ScreenInfo.GetRedrawRange(g.Col, g.Row, state)

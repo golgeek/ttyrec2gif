@@ -1,9 +1,10 @@
-package main
+package ttyrec2gif
 
 import (
-	"github.com/sugyan/ttyread"
 	"io"
 	"os"
+
+	"github.com/sugyan/ttyread"
 )
 
 // Terminal interface
