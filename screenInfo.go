@@ -1,4 +1,4 @@
-package main
+package ttyrec2gif
 
 import (
 	"github.com/james4k/terminal"

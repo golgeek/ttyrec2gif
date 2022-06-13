@@ -1,12 +1,13 @@
-package main
+package ttyrec2gif
 
 import (
 	"bytes"
 	"image"
 	"image/gif"
 	"io/ioutil"
-	"github.com/james4k/terminal"
 	"os"
+
+	"github.com/james4k/terminal"
 )
 
 // GifGenerator type

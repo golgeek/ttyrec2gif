@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+
+	"github.com/golgeek/ttyrec2gif"
 )
 
 func main() {
@@ -21,7 +23,7 @@ func main() {
 		os.Exit(0)
 	}
 
-	generator := NewGifGenerator()
+	generator := ttyrec2gif.NewGifGenerator()
 	generator.Speed = *speed
 	generator.Row = *row
 	generator.Col = *col
